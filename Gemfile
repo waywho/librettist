@@ -33,7 +33,13 @@ end
 
 gem 'simple_form'
 
-gem 'bing_translator', '~> 4.5.0'
+gem 'bing_translator', '~> 4.6.0'
+
+gem 'rest-client'
+
+gem 'nokogiri'
+
+# gem 'easy_translate'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,17 @@
+<% @text_array.each_with_index do |sentence, index| %>
+
+	<% @output[index][1].split(" ").each do |alignment| %>
+		<% coord = alignment.split(/\s*[:-]\s*/) %>
+
+		<div class = 'word_block'>
+			<div class = 'text_row'>
+				<%= sentence[coord[0].to_i..coord[1].to_i] %>
+			</div>
+			<div class = 'output_row'>
+				<%= @output[index][0][coord[2].to_i..coord[3].to_i] %>
+			</div>
+		</div>
+	<% end %>
+	<br />
+<% end %>
+

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   root 'translators#index'
+
+  resources :translators, :only => [:show]
+  post :translate, to: 'translators#translate'
+  get :translation, to: 'translators#translation'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

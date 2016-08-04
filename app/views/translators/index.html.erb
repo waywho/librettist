@@ -2,8 +2,23 @@
 <h1>Librettist</h1>
 
 <div class="col-xs-12 col-sm-6">
-	<%= simple_form_for :translator, url: "#" do |f| %>
+	<%= simple_form_for :translator, url: translate_path, remote: true do |f| %>
 		<%= f.input :libretto, as: :text %>
-		<%= f.button :submit, "Translate" %>
+		<%= f.button :submit, "Translate", :id => 'translate_btn' %>
 	<% end %>
 </div>
+
+<div class="col-xs-12 col-sm-6">
+	<div id = 'textOutput'>
+		<%= @output if @output.present? %>
+	</div>
+</div>
+
+<script>
+
+$(document).ready(function() {
+
+			
+		
+})
+</script>
